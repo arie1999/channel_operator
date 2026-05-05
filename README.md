@@ -4,7 +4,7 @@ Automated content curation platform. Watches sources, drafts professional-qualit
 
 First channel: **פסיכולוגיה היום** — Hebrew, mental-health professionals, AI-and-psychology research.
 
-The product brief lives in [BRIEF.md](BRIEF.md). This README documents implementation choices.
+The product brief lives in [BRIEF.md](BRIEF.md). This README documents implementation choices. Day-to-day running and recovery procedures are in [OPERATIONS.md](OPERATIONS.md).
 
 ## Tech decisions
 
