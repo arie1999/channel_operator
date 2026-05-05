@@ -1,0 +1,380 @@
+# Hebrew Clinical Psychology Lexicon — seed set for Stage 3 prototype.
+#
+# Sourced from "Hebrew Clinical Psychology Translation Guide" (operator-supplied),
+# which is itself an operational distillation of:
+#
+#   Shapira, N., Atzil-Slonim, D., Juravski, D., et al. (2021).
+#   Hebrew Psychological Lexicons. Proceedings of the Seventh Workshop on
+#   Computational Linguistics and Clinical Psychology, ACL.
+#   https://github.com/natalieShapira/HebrewPsychologicalLexicons (CC-BY-SA)
+#
+# Schema:
+#   en      English term (canonical form)
+#   he      Hebrew rendering — the model MUST use this, not paraphrase
+#   forbid  Hebrew rendering the model MUST NOT use (only when there is
+#           a documented "wrong" alternative that sounds plausible)
+#   note    Disambiguation context, only when the term has multiple senses
+#
+# Editorial scope: terms likely to appear in PubMed / arXiv / journal abstracts
+# for clinical psychology and AI-and-psychology research. Categories oriented
+# to case-study transcription (paralinguistics, depressive linguistic markers)
+# are excluded — they belong to a future case-study channel, not this one.
+
+terms:
+  # ────────────────────────────────────────────────────────────
+  # Core psychological concepts
+  # ────────────────────────────────────────────────────────────
+  - en: mentalization
+    he: מנטליזציה
+  - en: mind-mindedness
+    he: תודעת-מנטליות
+    note: maternal/caregiving context
+  - en: mindfulness
+    he: קשיבות
+    note: prefer קשיבות over the transliteration מיינדפולנס in academic prose
+  - en: psychotherapy
+    he: פסיכותרפיה
+  - en: mental states
+    he: מצבים נפשיים
+  - en: mental health
+    he: בריאות נפשית
+  - en: mental disorder
+    he: הפרעה נפשית
+
+  # ────────────────────────────────────────────────────────────
+  # Emotions — valence (most relevant for research abstracts)
+  # ────────────────────────────────────────────────────────────
+  - en: anxiety
+    he: חרדה
+  - en: depression (state)
+    he: דיכאון
+  - en: sadness
+    he: עצב
+  - en: anger
+    he: כעס
+  - en: fear
+    he: פחד
+  - en: guilt
+    he: אשמה
+  - en: shame
+    he: בושה
+  - en: distress
+    he: מצוקה
+  - en: loneliness
+    he: בדידות
+  - en: hostility
+    he: עוינות
+  - en: well-being (positive affect)
+    he: רגש חיובי
+  - en: emotion (general)
+    he: רגש
+  - en: feeling (subjective)
+    he: תחושה
+    note: phenomenological / experiential — distinct from רגש
+  - en: affect
+    he: אפקט
+    note: technical / clinical sense; for general-prose use רגש
+  - en: mood
+    he: מצב רוח
+
+  # ────────────────────────────────────────────────────────────
+  # Developmental psychology
+  # ────────────────────────────────────────────────────────────
+  - en: attachment
+    he: התקשרות
+  - en: secure attachment
+    he: התקשרות בטוחה
+  - en: insecure attachment
+    he: התקשרות לא בטוחה
+  - en: disorganized attachment
+    he: התקשרות לא-מאורגנת
+  - en: temperament
+    he: טמפרמנט
+  - en: development
+    he: התפתחות
+  - en: early childhood
+    he: גיל הרך
+  - en: caregiver
+    he: מטפל ראשוני
+    note: developmental sense — distinguish from clinical מטפל (therapist)
+
+  # ────────────────────────────────────────────────────────────
+  # Cognitive & neurological — includes critical distinctions
+  # ────────────────────────────────────────────────────────────
+  - en: embedded (in neural pathways)
+    he: משתרשים
+    forbid: מתבססים
+    note: for "embedded in neural pathways" specifically
+  - en: encoded (neural)
+    he: מקודדים
+  - en: embodied
+    he: מגולם
+    forbid: מוחשי
+    note: somatic / experiential sense
+  - en: procedural memory
+    he: זיכרון פרוצדורלי
+  - en: declarative memory
+    he: זיכרון הצהרתי
+  - en: working memory
+    he: זיכרון עבודה
+  - en: episodic memory
+    he: זיכרון אפיזודי
+  - en: semantic memory
+    he: זיכרון סמנטי
+  - en: brain
+    he: מוח
+  - en: mind
+    he: נפש
+    note: psychological sense; for "mental" as adjective use מנטלי
+  - en: cognitive
+    he: קוגניטיבי
+  - en: neural
+    he: עצבי
+    note: prefer עצבי over the transliteration נוירונלי in flowing prose
+  - en: neurotransmitter
+    he: מוליך עצבי
+    note: prefer over the transliteration נוירוטרנסמיטר
+  - en: cortisol
+    he: קורטיזול
+  - en: dopamine
+    he: דופמין
+  - en: serotonin
+    he: סרוטונין
+
+  # ────────────────────────────────────────────────────────────
+  # Psychoanalytic & dynamic
+  # ────────────────────────────────────────────────────────────
+  - en: unconscious (Freudian)
+    he: לא-מודע
+  - en: non-conscious (cognitive)
+    he: בלתי-מודע
+  - en: pre-conscious
+    he: טרום-מודע
+  - en: defense mechanisms
+    he: מנגנוני הגנה
+  - en: repression
+    he: דחיקה
+  - en: projection
+    he: הקרנה
+  - en: denial
+    he: הכחשה
+  - en: rationalization
+    he: רציונליזציה
+  - en: splitting (defense)
+    he: פיצול
+  - en: transference
+    he: העברה
+    note: the Hebrew term העברה is preferred in academic prose; the
+      transliteration טרנספרנס is acceptable in clinical talk
+  - en: countertransference
+    he: העברה נגדית
+  - en: resistance (clinical)
+    he: התנגדות
+  - en: insight (clinical)
+    he: תובנה
+  - en: psychodynamic
+    he: פסיכודינמי
+
+  # ────────────────────────────────────────────────────────────
+  # Clinical & therapeutic — roles, process, modalities
+  # ────────────────────────────────────────────────────────────
+  - en: therapist
+    he: מטפל
+    note: gender per context — מטפלת for feminine
+  - en: psychotherapist
+    he: פסיכותרפיסט
+  - en: client
+    he: מטופל
+    note: counseling sense; gender per context
+  - en: patient
+    he: מטופל
+    note: medical/clinical sense; same Hebrew root as client
+  - en: session
+    he: מפגש טיפולי
+  - en: therapeutic alliance
+    he: ברית טיפולית
+  - en: working alliance
+    he: ברית עבודה
+  - en: treatment
+    he: טיפול
+  - en: intervention
+    he: התערבות
+  - en: assessment
+    he: הערכה
+  - en: diagnosis
+    he: אבחנה
+  - en: outcome
+    he: תוצאה
+  - en: cognitive behavioral therapy
+    he: טיפול קוגניטיבי-התנהגותי
+  - en: dialectical behavior therapy
+    he: טיפול דיאלקטי-התנהגותי
+  - en: psychodynamic therapy
+    he: פסיכותרפיה פסיכודינמית
+  - en: mentalization-based treatment
+    he: טיפול מבוסס מנטליזציה
+  - en: EMDR
+    he: EMDR
+    note: keep the English acronym; expand once on first use as
+      "עיבוד וחיסון מחדש (EMDR)"
+
+  # ────────────────────────────────────────────────────────────
+  # Trauma & stress — includes critical distinctions
+  # ────────────────────────────────────────────────────────────
+  - en: trauma
+    he: טראומה
+  - en: complex trauma
+    he: טראומה מורכבת
+  - en: relational trauma
+    he: טראומה יחסית
+  - en: PTSD
+    he: PTSD
+    note: expand once on first use as "הפרעת דחק פוסט-טראומטית (PTSD)"
+  - en: stress
+    he: לחץ
+  - en: stressor
+    he: גורם לחץ
+  - en: dissociation
+    he: דיסוציאציה
+  - en: fragmentation
+    he: פיצול
+    forbid: פירוק
+    note: psychological splitting sense
+  - en: disarray (psychological)
+    he: אי-ויסות
+    forbid: אי-סדר
+
+  # ────────────────────────────────────────────────────────────
+  # Emotion regulation
+  # ────────────────────────────────────────────────────────────
+  - en: emotion regulation
+    he: ויסות רגשי
+  - en: affect regulation
+    he: ויסות אפקטיבי
+  - en: dysregulation
+    he: אי-ויסות
+  - en: self-regulation
+    he: ויסות עצמי
+  - en: arousal
+    he: עוררות
+  - en: distress tolerance
+    he: סבילות למצוקה
+
+  # ────────────────────────────────────────────────────────────
+  # Relational & intersubjective
+  # ────────────────────────────────────────────────────────────
+  - en: attunement
+    he: התאמה רגשית
+  - en: empathy
+    he: אמפתיה
+  - en: mirroring
+    he: השתקפות
+  - en: containment (Bion)
+    he: הכלה
+  - en: holding (Winnicott)
+    he: החזקה
+  - en: intersubjective
+    he: אינטר-סובייקטיבי
+
+  # ────────────────────────────────────────────────────────────
+  # Well-being & functioning
+  # ────────────────────────────────────────────────────────────
+  - en: well-being
+    he: רווחה
+  - en: mental well-being
+    he: רווחה נפשית
+  - en: functioning
+    he: תפקוד
+  - en: self-esteem
+    he: הערכה עצמית
+  - en: self-efficacy
+    he: מסוגלות עצמית
+  - en: resilience
+    he: חוסן נפשי
+  - en: quality of life
+    he: איכות חיים
+
+  # ────────────────────────────────────────────────────────────
+  # DSM diagnoses
+  # ────────────────────────────────────────────────────────────
+  - en: major depressive disorder
+    he: הפרעה דיכאונית מג'ורית
+  - en: bipolar disorder
+    he: הפרעה דו-קוטבית
+  - en: generalized anxiety disorder
+    he: הפרעת חרדה כללית
+  - en: panic disorder
+    he: הפרעת פאניקה
+  - en: social anxiety disorder
+    he: הפרעת חרדה חברתית
+  - en: agoraphobia
+    he: אגורפוביה
+  - en: obsessive-compulsive disorder
+    he: הפרעה טורדנית-כפייתית
+  - en: borderline personality disorder
+    he: הפרעת אישיות גבולית
+  - en: personality disorder
+    he: הפרעת אישיות
+  - en: eating disorder
+    he: הפרעת אכילה
+
+  # ────────────────────────────────────────────────────────────
+  # Alliance, rupture, repair
+  # ────────────────────────────────────────────────────────────
+  - en: alliance rupture
+    he: קרע בברית
+  - en: rupture
+    he: קרע
+  - en: repair (alliance)
+    he: תיקון
+  - en: tension (clinical)
+    he: מתח
+  - en: misunderstanding
+    he: אי-הבנה
+  - en: conflict
+    he: קונפליקט
+
+  # ────────────────────────────────────────────────────────────
+  # Research & methodology — keep statistics in English
+  # ────────────────────────────────────────────────────────────
+  - en: meta-analysis
+    he: מטא-אנליזה
+  - en: systematic review
+    he: סקירה שיטתית
+  - en: randomized controlled trial
+    he: ניסוי מבוקר אקראי
+  - en: longitudinal study
+    he: מחקר אורך
+  - en: cross-sectional study
+    he: מחקר חתך
+  - en: cohort
+    he: קבוצת מחקר
+  - en: sample (research)
+    he: מדגם
+  - en: effect size
+    he: גודל אפקט
+  - en: follow-up
+    he: מעקב
+  - en: control group
+    he: קבוצת ביקורת
+  - en: outcome measure
+    he: מדד תוצאה
+
+  # ────────────────────────────────────────────────────────────
+  # AI and psychology — narrow set, only confidently standardized terms.
+  # The brief flags `parasocial attachment`, `prompt injection`, and
+  # `alignment` as needing operator decisions; they are intentionally NOT
+  # included here. Add them when the operator picks renderings.
+  # ────────────────────────────────────────────────────────────
+  - en: large language model
+    he: מודל שפה גדול
+  - en: artificial intelligence
+    he: בינה מלאכותית
+  - en: machine learning
+    he: למידת מכונה
+  - en: neural network
+    he: רשת עצבית
+  - en: chatbot
+    he: צ'אטבוט
+  - en: algorithm
+    he: אלגוריתם

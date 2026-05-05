@@ -1,0 +1,12 @@
+services:
+  channels-operator:
+    build: .
+    container_name: channels-operator
+    env_file: .env
+    volumes:
+      # Channel configs are re-read at every pipeline run; mount them so
+      # edits take effect without rebuilding the image.
+      - ./channels:/app/channels:ro
+      # SQLite + backups live outside the container so they survive rebuilds.
+      - ./data:/app/data
+    restart: unless-stopped

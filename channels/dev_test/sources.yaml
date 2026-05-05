@@ -1,0 +1,31 @@
+# Sources for the Hebrew AI-news channel. Reuse the AI-focused feeds
+# that proved working in psychology_today's 2026-05-05 test run; the
+# clinical-keyword filter rejected most of these items there, but
+# this channel's keywords are AI-broad so the pass rate should be
+# much higher.
+
+sources:
+  - type: rss
+    name: algorithmic_bridge
+    url: "https://www.thealgorithmicbridge.com/feed"
+    axis_hint: A
+
+  - type: rss
+    name: import_ai
+    url: "https://importai.substack.com/feed"
+    axis_hint: A
+
+  - type: rss
+    name: mit_tech_review
+    url: "https://www.technologyreview.com/feed/"
+    axis_hint: A
+
+  - type: rss
+    name: deepmind_blog
+    url: "https://deepmind.google/blog/rss.xml"
+    axis_hint: A
+
+  - type: rss
+    name: bbc_tech
+    url: "https://feeds.bbci.co.uk/news/technology/rss.xml"
+    axis_hint: A

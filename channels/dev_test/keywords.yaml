@@ -1,0 +1,33 @@
+# Stage 1 keyword filter for the AI-news channel. Broad AI terms.
+
+include:
+  - AI
+  - artificial intelligence
+  - LLM
+  - large language model
+  - machine learning
+  - deep learning
+  - neural network
+  - generative
+  - transformer
+  - chatbot
+  - ChatGPT
+  - Claude
+  - Gemini
+  - OpenAI
+  - Anthropic
+  - DeepMind
+  - alignment
+  - AI safety
+  - foundation model
+  - multimodal
+  - agent
+
+exclude:
+  # Pure crypto / web3 hype that often pulls in via "AI"
+  - bitcoin
+  - cryptocurrency
+  - NFT
+  # Off-topic AI categories (not news-relevant for this audience)
+  - "AI girlfriend"
+  - "AI companion"

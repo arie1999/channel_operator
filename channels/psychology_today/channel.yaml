@@ -1,0 +1,62 @@
+id: psychology_today
+name: פסיכולוגיה היום
+language: he
+emoji: 🧠
+
+# Test channel during Phase 2-7. Switch to the public handle
+# (e.g., "@psychology_today_il") when ready to go live.
+telegram_channel_id: "@psychology_today_il"
+
+audience: |
+  Hebrew-speaking mental-health professionals — clinical psychologists,
+  psychotherapists, advanced graduate students, and clinical researchers
+  in Israel. Read like colleagues briefing colleagues.
+
+voice: |
+  Sober, evidence-aware, professional. No hype, no second-person, no
+  emoji in the post body. Lead with the finding, not the framing.
+
+axes:
+  - id: A
+    label: clinical_practice
+    hashtags: ["#מחקר", "#פרקטיקה"]
+    target_share: 0.6
+  - id: B
+    label: ai_psychology
+    hashtags: ["#AI_קליני", "#AI_מחקר"]
+    target_share: 0.4
+
+# Per-channel bot tokens. If empty, falls back to env vars
+# EDITOR_BOT_TOKEN and PUBLISHER_BOT_TOKEN. SaaS-readiness: multi-tenant
+# deployments give each tenant their own bot tokens here.
+editor_bot_token: ""
+publisher_bot_token: ""
+
+# Models — Stage 2 (relevance scoring) and Stage 3 (summarization).
+# Stage 3 was operator-validated 2026-05-04 against Opus 4.7 on a 5-item
+# Hebrew test; Qwen matched quality at ~58x lower cost. Reasoning must
+# be explicitly disabled or Qwen burns reasoning tokens and stalls.
+models:
+  stage2:
+    provider: openrouter
+    model: anthropic/claude-haiku-4-5
+    reasoning: false
+  stage3:
+    provider: openrouter
+    model: qwen/qwen3.6-plus
+    reasoning: false
+
+# Paths are resolved relative to this channel folder.
+sources_file: sources.yaml
+keywords_file: keywords.yaml
+lexicon_file: lexicon.yaml
+prompts:
+  relevance: prompts/relevance.txt
+  summarize: prompts/summarize.txt
+
+cadence:
+  posts_per_week_target: 5
+  drafts_per_day_max: 5
+  fetch_time_local: "06:00"
+  publish_times_local: ["08:00", "13:00", "19:00"]
+  timezone: Asia/Jerusalem

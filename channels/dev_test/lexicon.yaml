@@ -1,0 +1,33 @@
+# Hebrew AI-news lexicon. Starter set; expand as the channel matures.
+
+terms:
+  - en: artificial intelligence
+    he: בינה מלאכותית
+  - en: large language model
+    he: מודל שפה גדול
+  - en: LLM
+    he: מודל שפה גדול
+  - en: machine learning
+    he: למידת מכונה
+  - en: deep learning
+    he: למידה עמוקה
+  - en: neural network
+    he: רשת עצבית
+  - en: chatbot
+    he: צ'אטבוט
+  - en: algorithm
+    he: אלגוריתם
+  - en: model
+    he: מודל
+  - en: training
+    he: אימון
+  - en: dataset
+    he: מאגר נתונים
+  - en: hallucination
+    he: הזיה
+  - en: foundation model
+    he: מודל יסוד
+  - en: multimodal
+    he: רב-מודלי
+  - en: agent
+    he: סוכן

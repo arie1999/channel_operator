@@ -1,0 +1,68 @@
+# Hebrew AI news channel — accessible language for non-specialist
+# Israelis aged 25-55. Per the May 2026 channel spec.
+#
+# Two axes:
+#   A — AI news (3 posts/day): RSS-pipeline-driven, automated
+#   B — Practical tips & tools (2 posts/day): operator-curated
+#
+# IMPORTANT: This pipeline currently auto-populates only Axis A drafts.
+# Axis B (practical content) requires a separate content workstream
+# that doesn't exist yet — see post-Phase-8 backlog.
+
+id: dev_test
+name: חדשות AI בשפה פשוטה
+language: he
+emoji: 🤖
+
+telegram_channel_id: "-1003612608216"
+
+audience: |
+  Regular Israelis aged 25-55, not tech professionals. Interested in
+  technology but not experts. Want practical value: how AI affects
+  their lives, useful tools, time-saving tips. Busy people scrolling
+  during breaks and evenings. Key insight: they don't want to learn
+  AI — they want to use it or understand its impact.
+
+voice: |
+  Warm, friendly, fun, approachable — like explaining to a friend or
+  family member. Plain Hebrew, no jargon without Hebrew explanation.
+  Always answer "why does this matter to me?" Use real-life examples
+  and analogies. Emojis are encouraged for scannability. Sober about
+  hype but never dry. End with a clear call-to-action when relevant.
+
+axes:
+  - id: A
+    label: ai_news
+    hashtags: ["#AI", "#חדשות"]
+    target_share: 0.6
+  - id: B
+    label: practical
+    hashtags: ["#כלים", "#טיפים"]
+    target_share: 0.4
+
+editor_bot_token: ""
+publisher_bot_token: ""
+
+models:
+  stage2:
+    provider: openrouter
+    model: anthropic/claude-haiku-4-5
+    reasoning: false
+  stage3:
+    provider: openrouter
+    model: qwen/qwen3.6-plus
+    reasoning: false
+
+sources_file: sources.yaml
+keywords_file: keywords.yaml
+lexicon_file: lexicon.yaml
+prompts:
+  relevance: prompts/relevance.txt
+  summarize: prompts/summarize.txt
+
+cadence:
+  posts_per_week_target: 35   # 5 per day x 7 days, weekend reduction handled manually
+  drafts_per_day_max: 5
+  fetch_time_local: "06:00"
+  publish_times_local: ["09:00", "12:30", "15:30", "19:00", "20:45"]
+  timezone: Asia/Jerusalem

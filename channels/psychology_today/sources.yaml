@@ -1,0 +1,155 @@
+# Source list for the Psychology Today channel.
+#
+# As of 2026-05-05, working sources are: the 4 PubMed queries,
+# nature_human_behaviour, deepmind_blog. Sources marked FAILING below
+# returned a parse error or empty result on first run — operator should
+# verify the real RSS endpoint when convenient. New additions from the
+# 2026-05-05 source list audit are at the bottom of each axis section.
+
+sources:
+  # ─── Axis A: clinical practice and research ────────────────────────────
+
+  - type: pubmed_rss
+    name: pubmed_psychotherapy_outcome
+    query: "(psychotherapy[Title/Abstract]) AND (outcome[Title/Abstract] OR effectiveness[Title/Abstract])"
+    axis_hint: A
+
+  - type: pubmed_rss
+    name: pubmed_attachment_clinical
+    query: "(attachment[Title/Abstract]) AND (clinical[Title/Abstract] OR psychotherapy[Title/Abstract])"
+    axis_hint: A
+
+  - type: pubmed_rss
+    name: pubmed_mentalization
+    query: "mentalization[Title/Abstract] OR mentalizing[Title/Abstract]"
+    axis_hint: A
+
+  - type: pubmed_rss
+    name: pubmed_relational_trauma
+    query: "(early[Title/Abstract] AND trauma[Title/Abstract]) OR (relational[Title/Abstract] AND trauma[Title/Abstract])"
+    axis_hint: A
+
+  # FAILING 2026-05-05: parse error. PsyArXiv per-discipline feeds may
+  # be at https://osf.io/preprints/psyarxiv/discover?... — verify URL.
+  - type: rss
+    name: psyarxiv
+    url: "https://psyarxiv.com/rss"
+    axis_hint: A
+
+  # FAILING 2026-05-05: parse error. BPS Research Digest may have moved
+  # to https://www.bps.org.uk/research-digest with feed at /feed/.
+  - type: rss
+    name: bps_research_digest
+    url: "https://www.bps.org.uk/rss/research-digest"
+    axis_hint: A
+
+  - type: rss
+    name: nature_human_behaviour
+    url: "https://www.nature.com/nathumbehav.rss"
+    axis_hint: A
+
+  # FAILING 2026-05-05: returned 0 items. Verify APA news RSS endpoint.
+  - type: rss
+    name: apa_monitor
+    url: "https://www.apa.org/news/feed.xml"
+    axis_hint: A
+
+  # FAILING 2026-05-05: parse error. JMIR Mental Health RSS likely at
+  # https://mental.jmir.org/feed/atom — verify.
+  - type: rss
+    name: jmir_mental_health
+    url: "https://mental.jmir.org/rss"
+    axis_hint: A
+
+  # FAILING 2026-05-05: parse error. Verify Nature MH RSS path.
+  - type: rss
+    name: nature_mental_health
+    url: "https://www.nature.com/nmh.rss"
+    axis_hint: A
+
+  # ─── Axis A: 2026-05-05 additions ──────────────────────────────────────
+
+  - type: rss
+    name: psypost
+    url: "https://www.psypost.org/feed/"
+    axis_hint: A
+
+  - type: rss
+    name: science_magazine
+    url: "https://www.science.org/rss/news_current.xml"
+    axis_hint: A
+
+  - type: rss
+    name: psychiatric_news
+    url: "https://psychnews.psychiatryonline.org/action/showFeed?type=etoc&feed=rss&jc=pn"
+    axis_hint: A
+
+  # ─── Axis B: AI and psychology ────────────────────────────────────────
+
+  # arXiv queries are filtered post-fetch by the keywords list as a
+  # belt-and-suspenders check; the source query already narrows category.
+  # NOTE 2026-05-05: hit HTTP 429 rate-limit on first run. The arxiv
+  # library backs off; consider reducing max_results if it persists.
+  - type: arxiv
+    name: arxiv_cs_cl_mental_health
+    query: "cat:cs.CL AND (mental health OR therapy OR depression OR anxiety OR psychiatry)"
+    axis_hint: B
+
+  - type: arxiv
+    name: arxiv_cs_hc_mental_health
+    query: "cat:cs.HC AND (mental health OR therapy OR wellbeing)"
+    axis_hint: B
+
+  # FAILING 2026-05-05: parse error. Stanford HAI may publish via WP
+  # at https://hai.stanford.edu/feed — verify.
+  - type: rss
+    name: stanford_hai_news
+    url: "https://hai.stanford.edu/news/rss.xml"
+    axis_hint: B
+
+  # FAILING 2026-05-05: parse error. Anthropic does not publish RSS at
+  # /research/rss.xml; the news index returns HTML. Replace when a real
+  # feed exists, or scrape (out of scope for now).
+  - type: rss
+    name: anthropic_research
+    url: "https://www.anthropic.com/research/rss.xml"
+    axis_hint: B
+
+  # FAILING 2026-05-05: parse error. OpenAI does not publish RSS for
+  # research; same situation as Anthropic.
+  - type: rss
+    name: openai_research
+    url: "https://openai.com/research/rss.xml"
+    axis_hint: B
+
+  - type: rss
+    name: deepmind_blog
+    url: "https://deepmind.google/blog/rss.xml"
+    axis_hint: B
+
+  # ─── Axis B: 2026-05-05 additions ──────────────────────────────────────
+
+  - type: rss
+    name: algorithmic_bridge
+    url: "https://www.thealgorithmicbridge.com/feed"
+    axis_hint: B
+
+  - type: rss
+    name: digital_headshrinker
+    url: "https://digitalheadshrinker.substack.com/feed"
+    axis_hint: B
+
+  - type: rss
+    name: counselling_substack
+    url: "https://counselling.substack.com/feed"
+    axis_hint: B
+
+  - type: rss
+    name: import_ai
+    url: "https://importai.substack.com/feed"
+    axis_hint: B
+
+  - type: rss
+    name: mit_tech_review
+    url: "https://www.technologyreview.com/feed/"
+    axis_hint: B

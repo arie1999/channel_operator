@@ -1,0 +1,116 @@
+# Five synthetic items for the Stage 3 prototype.
+#
+# These are NOT real papers. They are abstract-shaped mocks designed
+# to exercise both axes (A: clinical practice, B: AI and psychology),
+# both methodology types (RCT, meta-analysis, neuroimaging, survey),
+# and both lexicon-heavy and lexicon-light cases.
+#
+# Replace with 5–10 real PubMed/arXiv abstracts before any judgment
+# call about Hebrew quality. Synthetic abstracts tell you the prompt
+# works mechanically; only real abstracts tell you the OUTPUT is good.
+
+items:
+  - title: "Attachment-based interventions for adult depression: an updated meta-analysis"
+    source: "Journal of Affective Disorders (synthetic)"
+    axis: A
+    abstract: |
+      Background. Attachment theory has informed psychotherapeutic approaches
+      to adult depression for several decades, but the cumulative evidence
+      base has not been systematically updated since 2018.
+      Methods. We conducted a meta-analysis of 34 randomized controlled
+      trials (N = 4,127 adults with major depressive disorder) comparing
+      attachment-based psychotherapy with active controls. Outcomes were
+      depressive symptom severity at post-treatment and at 12-month
+      follow-up.
+      Results. Attachment-based interventions showed a small-to-moderate
+      effect over active controls at post-treatment (g = 0.34, 95% CI
+      [0.21, 0.47]) and a smaller but significant effect at 12-month
+      follow-up (g = 0.22, 95% CI [0.09, 0.35]). Heterogeneity was moderate.
+      Effects were larger in trials targeting patients with documented
+      early attachment disruptions.
+      Conclusions. Attachment-based psychotherapies produce durable
+      reductions in depressive symptoms, with the strongest effects in
+      patients selected for relevant developmental history.
+
+  - title: "Eight-year outcomes of mentalization-based treatment for borderline personality disorder"
+    source: "American Journal of Psychiatry (synthetic)"
+    axis: A
+    abstract: |
+      Objective. To evaluate long-term outcomes of mentalization-based
+      treatment (MBT) versus structured clinical management for borderline
+      personality disorder.
+      Method. 134 adults with borderline personality disorder were
+      randomized to 18 months of MBT or structured clinical management
+      and followed for 8 years post-randomization. Primary outcomes were
+      suicidal behavior, self-harm, and global functioning.
+      Results. At 8-year follow-up, the MBT group showed sustained lower
+      rates of suicide attempts (12% vs 28%) and recurrent self-harm
+      (18% vs 41%) compared with the control group. Global Assessment of
+      Functioning scores remained higher in the MBT group (mean 68 vs 56).
+      Conclusions. The benefits of MBT for borderline personality disorder
+      appear to extend well beyond the active treatment phase.
+
+  - title: "Functional connectivity in adults with histories of early relational trauma"
+    source: "Biological Psychiatry (synthetic)"
+    axis: A
+    abstract: |
+      Background. Adults with histories of early relational trauma show
+      elevated rates of mood and anxiety disorders, but the neural
+      substrates remain under-specified.
+      Methods. Resting-state fMRI was acquired in 78 adults with
+      documented histories of childhood relational trauma and 82
+      demographically matched controls. We examined within- and
+      between-network functional connectivity in the default mode,
+      salience, and central executive networks.
+      Results. The trauma-exposed group showed reduced within-network
+      connectivity in the default mode network and elevated salience-to-
+      default-mode coupling. Effects were larger in participants with
+      current depression but remained significant in those without.
+      Conclusions. Early relational trauma is associated with persistent
+      alterations in self-referential and salience network organization
+      that do not reduce to current mood state.
+
+  - title: "Large language model assisted reflection between sessions in cognitive behavioral therapy"
+    source: "JMIR Mental Health (synthetic)"
+    axis: B
+    abstract: |
+      Background. Between-session work is a known mechanism of change in
+      cognitive behavioral therapy (CBT) but is poorly adhered to. Large
+      language models may scaffold reflection without replacing the
+      therapeutic relationship.
+      Methods. 156 adults receiving 12-session CBT for depression were
+      randomized to standard care or standard care plus a large language
+      model assistant for between-session reflection. The assistant was
+      bounded to Socratic questioning and prohibited from offering
+      diagnoses or treatment advice. Primary outcome was depression
+      severity at week 12.
+      Results. The augmented arm showed greater reduction in depressive
+      symptoms (mean change -9.2 vs -6.8 PHQ-9 points). Therapist-rated
+      working alliance did not differ between arms. Three participants
+      in the augmented arm reported emotional reliance on the assistant.
+      Conclusions. Bounded large language model use as an adjunct to
+      structured psychotherapy improved outcomes without disrupting the
+      therapeutic alliance, but parasocial reliance warrants monitoring.
+
+  - title: "Parasocial attachment to conversational AI in a non-clinical adult sample"
+    source: "Computers in Human Behavior (synthetic)"
+    axis: B
+    abstract: |
+      Background. Conversational AI products are increasingly used in
+      contexts that elicit attachment-like dynamics, including emotional
+      disclosure and grief processing. The clinical implications are
+      under-studied.
+      Methods. Cross-sectional online survey of 1,402 adults who reported
+      using a conversational AI product at least weekly. We measured
+      parasocial attachment using a modified Parasocial Interaction Scale,
+      attachment style, depression, and loneliness. A subsample of 87
+      participants completed semi-structured clinical interviews.
+      Results. 23% of participants met threshold for high parasocial
+      attachment to a conversational AI. High parasocial attachment was
+      associated with insecure attachment style, current depression, and
+      loneliness, but not with overall use frequency. Interview themes
+      included substitution for absent relationships and difficulty
+      tolerating model unavailability.
+      Conclusions. Parasocial attachment to conversational AI is common
+      and clinically meaningful, particularly in users with prior
+      attachment vulnerabilities.

@@ -1,0 +1,62 @@
+# Stage 1 keyword filter (per BRIEF.md §5).
+#
+# An item passes Stage 1 if it contains at least one `include` term AND
+# does not contain any `exclude` term. Match is case-insensitive,
+# whole-token, applied to title and abstract. Items with no abstract
+# are dropped regardless.
+
+include:
+  # ─── Clinical practice and research ─────────────────────────────────
+  - psychotherapy
+  - therapy
+  - therapist
+  - clinical
+  - mental health
+  - psychiatric
+  - attachment
+  - mentalization
+  - mentalizing
+  - trauma
+  - depression
+  - anxiety
+  - PTSD
+  - borderline
+  - personality disorder
+  - psychodynamic
+  - meta-analysis
+  - randomized
+  - infant mental health
+  - countertransference
+
+  # ─── AI and psychology ──────────────────────────────────────────────
+  - large language model
+  - LLM
+  - chatbot
+  - conversational AI
+  - therapy bot
+  - mental health AI
+  - alignment
+  - parasocial
+  - computational psychiatry
+  - AI ethics
+  - AI safety
+
+exclude:
+  # Pop-psychology / self-help / consumer-aimed framing (per BRIEF.md §3)
+  - life coach
+  - self-help
+  - manifestation
+  - astrology
+  - zodiac
+  - tips for
+  - "5 ways"
+  - "10 signs"
+  - listicle
+
+  # Animal-only studies (drop unless the translational link is in the
+  # title; the relevance scoring stage can still let them through if so)
+  - rat model
+  - rodent model
+  - in mice
+  - drosophila
+  - zebrafish
